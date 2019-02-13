@@ -1,0 +1,38 @@
+
+<section id="newPostPage">
+  <form (ngSubmit)="newPost()">
+  <div class="formUser">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h5 id="recipeTitle">Agrega tu receta</h5>
+        <div class="input-group mb-3 divCenter percentage">
+          <div id="add" *ngIf="iconImg === true" class="custom-file">
+            <input type="file" class="custom-file-input" id="customFile" (change)="addImg($event)" />
+            <label class="custom-file-label" for="customFile" (click)="upImg()">Selecciona una imagen</label>
+          </div>
+        </div>
+        <input 
+        [(ngModel)]="content.title"
+        type="text" 
+        name="title"
+        placeholder="Añade un titulo a la receta..." 
+        class="form-control my-3 divCenter percentage"
+        />
+        <input 
+        [(ngModel)]="content.text"
+        class="form-control my-3 divCenter percentage"
+        name="text"
+        type="text" 
+        id="content" placeholder="Agrega acá tu publicación..."/>
+        <div class="textAlign">
+          <button mat-button type="submit" class="btn btn-info textAlign" id="btnPublicar">
+            Publicar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </form>
+</section>

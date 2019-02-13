@@ -1,0 +1,21 @@
+<header id="buttons">
+    <nav class="navbar navbar-expand-lg text-light navbar-dark bg-danger">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a id="homeBtn" routerLink="/wall" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a id="profileBtn" routerLink="/profile" class="nav-link">Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a id="logoutBtn" routerLink="/login" (click)="auth.signOut()" class="nav-link">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
