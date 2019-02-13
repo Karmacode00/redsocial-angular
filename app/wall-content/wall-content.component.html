@@ -1,0 +1,48 @@
+<div id="cardContent" *ngIf ="posts?.length > 0">
+    <div *ngFor ="let post of posts">
+      <mat-card class="card">
+        <div class="container-fluid topPost">
+          <div id="date" class="row">
+            <p>{{post.date}}</p>
+          </div>
+        </div>
+        <div id="postMsg" class="row">
+          <div class="col-lg-12">
+            <img class="card-img" src="{{post.imgPost}}">
+          </div>
+          <div class="col-lg-12">
+            <h3>{{post.title}}</h3>
+          </div>
+          <div class="col-lg-12">
+            <p>{{post.text}}</p>
+          </div>
+        </div>
+        <div id="bottomInfo" class="row">
+          <div class="col-lg-12">
+            <img class="profileImg" src="{{post.photoUrl}}">
+            <p id="userName" >{{post.name}}</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12" id="postIcons">
+              <i *ngIf="isEditPost===false" (click)="editPostNow($event,post)" class="fas fa-pencil-alt"></i>
+              <i *ngIf="isEditPost && editPost.id===post.id" (click)="clear()" class="fas fa-times"></i>
+              <i (click)="deletePost($event, post)" class="fas fa-trash-alt"></i>
+              <i *ngIf="isGiveLike===false" (click)= "updateLikes($event, post)" class="fa fa-heart"></i>
+              <span>{{post.likeCounter}}</span>
+              <i *ngIf="isGiveLike && giveLike.id===post.id"></i>
+            </div>
+          </div>
+        </div>
+          <div *ngIf="isEditPost && editPost.id === post.id">
+            <form (ngSubmit)="editPost(post)" class="textAlign">
+              <div class='formUser'>
+                <input [(ngModel)]="post.text" type='text' placeholder={{post.text}} name ="post" id="post" class="form-control my-3 divCenter percentage">
+                <button (click)="updatePost(post)" type="submit" class="btn btn-info textAlign">Editar</button>
+              </div>
+            </form>
+          </div>
+      </mat-card>
+    </div>
+  </div>

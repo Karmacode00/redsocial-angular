@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0 auto;
+	background-color: #FAFAFA;
+}
+
+.textAlign{
+	text-align: center;
+}
+
+#logo-login{
+	height: 12em;
+}
+
+h1{
+	text-align: center;
+	color: #da1d0f;
+}
+
+.divCenter{
+	margin: 0 auto;
+}
+
+.percentage{
+	width: 80%;
+}
+
+.btn{
+	margin-bottom: 0.5em;
+}
+.facebook{
+	background-color: #29487d;
+	border-color: transparent;
+}
+.google{
+	background-color: red;
+}
+
+.iniciar{
+	display: inherit;
+	line-height: 2;
+	padding: 0.5em;
+	word-spacing: 3px;
+	color: white;
+	margin: .5rem;
+	display: initial;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	cursor: pointer;
+}
+
+/* Estilo de Registro */
+/* =================================== */
+#logo-login-registro{
+	height: 9em;
+	margin: 22px auto 12px;
+}
+
+#home{
+	padding-top: 1.5rem; 
+}
+
+#recipeTitle{
+	text-align: center;
+	color: #da1d0f;
+	font-size: 24px;
+	margin: 1rem auto;
+}
+
+.card{
+	margin: .5rem 1rem;
+}
+
+.card > img{
+	height: 400px;
+	object-fit: contain;
+}
+
+textarea{
+	max-width: 100%;
+}
+
+.cardPadding{
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+.cardPadding > ul > li{
+	padding-right: .7rem;
+}
+
+#postIcons > i, span{
+	margin-right: 0.4rem;
+}
+
+.red{
+	color: red;
+}
+
+#profileInfo{
+	float: left;
+}
