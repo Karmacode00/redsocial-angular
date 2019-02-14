@@ -1,6 +1,6 @@
 
 <section id="newPostPage">
-  <form (ngSubmit)="newPost()">
+  <form (ngSubmit)="newPost(formContent)" #formContent="ngForm">
   <div class="formUser">
   <div class="container">
     <div class="row">
