@@ -4,7 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "src/redsocial-angular",
+    "public": "dist/redsocial-angular",
     "ignore": [
       "firebase.json",
       "**/.*",
