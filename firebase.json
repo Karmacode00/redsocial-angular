@@ -4,12 +4,17 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "src/redsocial-angular",
-    "rewrite":[
+    "public": "dist/redsocial-angular",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
       {
-      "source":"**",
-      "destination":"/index.html"
-    }
-  ]
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
